@@ -21,12 +21,12 @@ export default function HeroSection() {
           <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 font-light max-w-2xl mx-auto">
             Where Champions Are Made
           </p>
-          <Button
+          {/* <Button
             size="lg"
             className="bg-green-600 hover:bg-green-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Join Now
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>
