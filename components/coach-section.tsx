@@ -18,7 +18,7 @@ export default function CoachSection() {
               </div>
 
               <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
-                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Marcus Rodriguez</h3>
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">coach</h3>
                 <p className="text-green-600 font-semibold mb-4 sm:mb-6 text-base sm:text-lg">
                   Head Coach & Academy Director
                 </p>
@@ -40,7 +40,7 @@ export default function CoachSection() {
 
                 <div className="mt-6 sm:mt-8 grid grid-cols-3 gap-4 text-center">
                   <div>
-                    <div className="text-xl sm:text-2xl font-bold text-green-600">15+</div>
+                    <div className="text-xl sm:text-2xl font-bold text-green-600">10+</div>
                     <div className="text-xs sm:text-sm text-gray-600">Years Experience</div>
                   </div>
                   <div>
