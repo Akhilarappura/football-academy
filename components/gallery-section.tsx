@@ -51,7 +51,7 @@ const galleryImages = [
     alt: "Team Photo",
     title: "Academy Team 2023",
   },
-   {
+  {
     src: "/images/gallery7.jpg",
     alt: "Team Photo",
     title: "Academy Team 2023",
@@ -70,6 +70,20 @@ const galleryImages = [
     src: "/images/gallery13.jpg",
     alt: "Team Photo",
     title: "Academy Team 2023",
+  },
+]
+
+// Collage images for the bottom section
+const collageImages = [
+  {
+    src: "/images/training.jpeg",
+    alt: "Training Excellence",
+    title: "Training Excellence",
+  },
+  {
+    src: "/images/galler19.jpg",
+    alt: "Team Spirit",
+    title: "Team Spirit",
   },
 ]
 
@@ -97,9 +111,9 @@ export default function GallerySection() {
   }
 
   return (
-  
     <section id="gallery" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
+        {/* Gallery Header */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Gallery</h2>
           <div className="w-16 sm:w-24 h-1 bg-green-600 mx-auto mb-6 sm:mb-8"></div>
@@ -108,7 +122,8 @@ export default function GallerySection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {/* Main Gallery Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-16 sm:mb-20">
           {galleryImages.map((image, index) => (
             <div
               key={index}
@@ -132,6 +147,66 @@ export default function GallerySection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* New Section: Left Image + Right Collage */}
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+          {/* Left Side - Large Image */}
+          <div className="relative">
+            <div className="relative h-96 sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl group">
+              <Image
+                src="/images/accademy.jpeg"
+                alt="Academy Excellence"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 text-white">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-2">Excellence in Every Game</h3>
+                <p className="text-sm sm:text-base opacity-90">
+                  Our academy focuses on developing not just skilled players, but well-rounded individuals who excel
+                  both on and off the field.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Collage */}
+          <div className="space-y-6">
+            {/* Top Collage Image */}
+            <div className="relative h-48 sm:h-64 lg:h-72 rounded-xl overflow-hidden shadow-lg group">
+              <Image
+                src={collageImages[0].src || "./images/training.jpeg"}
+                alt={collageImages[0].alt}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-green-600/80 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-start pl-6">
+                <div className="text-white">
+                  <h4 className="text-xl sm:text-2xl font-bold mb-2">{collageImages[0].title}</h4>
+                  <p className="text-sm opacity-90">Professional training methods</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Collage Image */}
+            <div className="relative h-48 sm:h-64 lg:h-72 rounded-xl overflow-hidden shadow-lg group">
+              <Image
+                src={collageImages[1].src || "./images/galler19.jpg"}
+                alt={collageImages[1].alt}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-l from-blue-600/80 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-end pr-6">
+                <div className="text-white text-right">
+                  <h4 className="text-xl sm:text-2xl font-bold mb-2">{collageImages[1].title}</h4>
+                  <p className="text-sm opacity-90">Building champions together</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
