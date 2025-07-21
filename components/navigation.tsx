@@ -31,10 +31,10 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
+          <Link href="/" className="flex items-center space-x-3 group" id="home">
             <div className="relative w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-110">
               <Image
-                src="/images/logo.png"
+                src="/images/logonew.jpg"
                 alt="Elite Football Academy Logo"
                 fill
                 className="object-contain"
@@ -43,7 +43,7 @@ export default function Navigation() {
             </div>
             <div className="hidden sm:block">
               <h1 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors duration-300">
-           Edu Sports Academy
+                Eduspo Academy
               </h1>
             </div>
           </Link>
